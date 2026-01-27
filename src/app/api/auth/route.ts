@@ -14,7 +14,8 @@ export async function GET(request: Request) {
 
   // Decap will open this endpoint in a popup window.
   // We redirect the user to GitHub OAuth, and GitHub redirects back to our callback.
-  const redirectUri = `${url.origin}/api/auth/callback`;
+  // Decap OAuth providers conventionally use `/callback`.
+  const redirectUri = `${url.origin}/callback`;
   const state = url.searchParams.get("state"); // Decap may send a state param.
 
   const authorizeUrl = new URL("https://github.com/login/oauth/authorize");

@@ -5,6 +5,7 @@ export async function GET(request: Request) {
 
   const code = url.searchParams.get("code");
   const state = url.searchParams.get("state") ?? undefined;
+  const origin = url.origin;
 
   const clientId = process.env.GITHUB_CLIENT_ID;
   const clientSecret = process.env.GITHUB_CLIENT_SECRET;
@@ -24,7 +25,11 @@ export async function GET(request: Request) {
   }
 
   if (!code) {
-    return NextResponse.json({ error: "Missing OAuth code" }, { status: 400 });
+    // Users sometimes hit this URL directly; Decap expects a popup callback page.
+    return new NextResponse(
+      `<!doctype html><html><body><pre>Missing OAuth code. Please start login from /admin and complete the GitHub authorization.</pre></body></html>`,
+      { status: 400, headers: { "Content-Type": "text/html; charset=utf-8" } }
+    );
   }
 
   // Exchange code for an access token.
@@ -59,14 +64,41 @@ export async function GET(request: Request) {
     );
   }
 
-  // Decap expects the token in the URL hash.
-  const adminRedirect = new URL(`${url.origin}/admin/`);
-  const hashParams = new URLSearchParams();
-  hashParams.set("access_token", tokenJson.access_token);
-  hashParams.set("token_type", tokenJson.token_type ?? "bearer");
-  if (state) hashParams.set("state", state);
-  adminRedirect.hash = hashParams.toString();
+  // Decap expects the OAuth provider callback page to `postMessage` the token to the opener.
+  // This is the de-facto Netlify/Decap convention:
+  //   authorization:{provider}:{status}:{json}
+  const provider = "github";
+  const payload = {
+    token: tokenJson.access_token,
+    provider,
+    token_type: tokenJson.token_type ?? "bearer",
+    state,
+  };
+  const successMessage = `authorization:${provider}:success:${JSON.stringify(
+    payload
+  )}`;
+  const html = `<!doctype html>
+<html>
+  <body>
+    <script>
+      (function () {
+        try {
+          if (window.opener) {
+            window.opener.postMessage(${JSON.stringify(
+              successMessage
+            )}, ${JSON.stringify(origin)});
+          }
+        } finally {
+          window.close();
+        }
+      })();
+    </script>
+  </body>
+</html>`;
 
-  return NextResponse.redirect(adminRedirect.toString());
+  return new NextResponse(html, {
+    status: 200,
+    headers: { "Content-Type": "text/html; charset=utf-8" },
+  });
 }
 
