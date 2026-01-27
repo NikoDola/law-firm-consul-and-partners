@@ -1,15 +1,16 @@
 local_backend:
   # Default is 8081. We pin this because on Windows it's common for 8081 to be taken.
   url: http://localhost:8082/api/v1
+  allowed_hosts: ["192.168.0.100"]
 
 backend:
   name: github
   # IMPORTANT: must match your Git remote / GitHub repo slug
   repo: NikoDola/law-firm-consul-and-partners
   branch: main
-  # Use the Next.js OAuth endpoints in this repo (see `src/app/api/auth/*`).
-  # If you host the site under a different origin, the endpoint is still the same path.
-  auth_endpoint: /api/auth
+  # Use this site as the OAuth "provider" (implemented in `src/app/api/auth/*`).
+  base_url: https://law-firm-consul-and-partners.vercel.app
+  auth_endpoint: api/auth
 
 media_folder: "public/uploads"
 public_folder: "/uploads"

@@ -1,14 +1,19 @@
 local_backend:
   # Default is 8081. We pin this because on Windows it's common for 8081 to be taken.
   url: http://localhost:8082/api/v1
+  # If you open the site via LAN IP (Next prints this under "Network"),
+  # Decap considers that "not localhost" unless you allow it here.
+  allowed_hosts: ["192.168.0.100"]
 
 backend:
   name: github
   # IMPORTANT: must match your GitHub repo slug
   repo: NikoDola/law-firm-consul-and-partners
   branch: main
-  # Custom OAuth endpoints implemented in `src/app/api/auth/*`
-  auth_endpoint: /api/auth
+  # Use this site as the OAuth "provider" (implemented in `src/app/api/auth/*`).
+  # Without this, Decap may fall back to Netlify's auth endpoint.
+  base_url: https://law-firm-consul-and-partners.vercel.app
+  auth_endpoint: api/auth
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
