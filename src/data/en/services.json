@@ -1,0 +1,30 @@
+[
+  {
+    "id": "insolvency-administration",
+    "title": "Insolvency Administration",
+    "iconKey": "",
+    "description": "Professional support in the handling and coordination of insolvency proceedings across EU jurisdictions, with a focus on legally compliant and efficient solutions.",
+    "countries": ["ireland", "cyprus"]
+  },
+  {
+    "id": "eu-driving-licence",
+    "title": "EU Driving Licence Consulting",
+    "iconKey": "",
+    "description": "Expert advisory on legal and administrative matters related to driving licences in cross-border situations, ensuring compliance with national and EU regulations.",
+    "countries": ["austria", "romania", "ireland"]
+  },
+  {
+    "id": "asset-management",
+    "title": "Asset Management Advisory",
+    "iconKey": "",
+    "description": "Structured advisory services for asset organization and international structuring, focused on legally sound frameworks, transparency, and long-term reliability.",
+    "countries": ["dubai", "united-kingdom", "united-states"]
+  },
+  {
+    "id": "company-relocation",
+    "title": "Company Relocation",
+    "iconKey": "",
+    "description": "Comprehensive assistance with the relocation of company headquarters and establishment of new legal entities, including legal structuring and administrative coordination.",
+    "countries": ["romania", "ireland", "switzerland", "austria"]
+  }
+]

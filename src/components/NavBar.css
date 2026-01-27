@@ -1,0 +1,161 @@
+.navBarDesktop {
+  background: black;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  position: relative;
+}
+
+/* Normal links */
+.navLinkDesktop {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.navLinkDesktop:hover {
+  opacity: 0.8;
+}
+
+/* Dropdown wrapper */
+.navDropdown {
+  position: relative;
+}
+
+/* Trigger styled same as links */
+/* Dropdown wrapper */
+.navDropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Trigger styled same as links */
+.navDropdownTrigger {
+  cursor: pointer;
+}
+
+/* Dropdown menu */
+.navDropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%; /* no gap */
+  left: 0;
+  background: #111;
+  border: 1px solid #333;
+  min-width: 220px;
+  z-index: 100;
+  padding: 6px 0;
+}
+
+/* KEEP OPEN when hovering anywhere inside */
+.navDropdown:hover .navDropdownMenu,
+.navDropdownMenu:hover {
+  display: block;
+}
+
+.navDropdownItem {
+  display: block;
+  padding: 10px 14px;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navDropdownItem:hover {
+  background: #222;
+}
+
+/* ---------- Burger ---------- */
+
+.navToggle {
+  display: none;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.burger span {
+  width: 26px;
+  height: 2px;
+  background: white;
+  display: block;
+}
+
+/* Wrap nav links */
+.navInner {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* ---------- Mobile ---------- */
+
+/* ---------- Burger ---------- */
+
+.navToggle {
+  display: none;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.burger span {
+  width: 26px;
+  height: 2px;
+  background: white;
+  display: block;
+}
+
+/* Nav wrapper */
+.navInner {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 900px) {
+  .burger {
+    display: flex;
+  }
+
+  .navInner {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    background: black;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 1.5rem;
+    padding: 2rem;
+
+    display: none;
+  }
+
+  /* SHOW WHEN CHECKED */
+  .navToggle:checked + .burger + .navInner {
+    display: flex;
+  }
+
+  /* Make dropdown full width on mobile */
+  .navDropdownMenu {
+    position: static;
+    border: none;
+  }
+}

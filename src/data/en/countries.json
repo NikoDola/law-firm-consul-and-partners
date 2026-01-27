@@ -1,0 +1,141 @@
+[
+  {
+    "id": "ireland",
+    "name": "Ireland",
+    "city": "Dublin",
+    "address": "Merrion Square, Dublin 2, Ireland",
+    "jurisdiction": "Established international business hub",
+    "imageUrls": [],
+    "addressDescription": "Our principal office coordinates all European operations and serves as the central hub for cross-border legal matters.",
+
+    "insolvency": {
+      "headline": "Legal Framework",
+      "services": [
+        "Structured management of insolvency cases under Irish law",
+        "Coordination with Irish courts and regulatory authorities",
+        "Communication with insolvency practitioners and creditors",
+        "Cross-border coordination within the European Union"
+      ],
+      "description1": "Our firm provides comprehensive support for insolvency proceedings in Ireland, offering structured management and coordination services that ensure compliance with Irish and European Union regulations.",
+      "description2": "Ireland's insolvency regime operates under the Companies Act 2014 and is subject to EU Regulation on Insolvency Proceedings. Our firm ensures that all proceedings are conducted in full compliance with both Irish national law and applicable European regulations, providing clients with legally sound solutions for complex cross-border matters."
+    },
+
+    "drivingLicence": {
+      "headline": "Regulatory Context",
+      "services": [
+        "Guidance on Irish driving licence regulations",
+        "Assistance with licence exchange from other jurisdictions",
+        "Coordination with NDLS and Road Safety Authority",
+        "EU Directive compliance for cross-border matters"
+      ],
+      "description1": "Our Irish practice provides comprehensive advisory services for driving licence matters, helping clients navigate the National Driver Licence Service (NDLS) requirements and EU cross-border recognition procedures.",
+      "description2": "Ireland's driving licence system is administered by the Road Safety Authority through the National Driver Licence Service. As an EU member state, Ireland adheres to EU Directive 2006/126/EC, enabling mutual recognition of driving licences across member states under specified conditions."
+    }
+  },
+
+  {
+    "id": "cyprus",
+    "name": "Cyprus",
+    "city": "",
+    "address": "",
+    "jurisdiction": "",
+    "imageUrls": [],
+    "addressDescription": "",
+
+    "insolvency": {
+      "headline": "Jurisdiction Advantages",
+      "services": [
+        "Coordination of insolvency proceedings under Cypriot law",
+        "Liaison with Cypriot courts and administrative bodies",
+        "Cross-border coordination with other EU member states",
+        "Communication with creditors and stakeholders"
+      ],
+      "description1": "Our Cyprus practice provides specialized support for insolvency matters, leveraging the jurisdiction's position as a key European business hub with connections to both EU and international markets.",
+      "description2": "Cyprus, as an EU member state, offers a stable legal framework aligned with European standards. The jurisdiction provides efficient procedures for handling both domestic and cross-border insolvency matters, supported by a well-developed professional infrastructure."
+    }
+  },
+
+  {
+    "id": "romania",
+    "name": "Romania",
+    "city": "",
+    "address": "",
+    "jurisdiction": "EU member state with competitive business environment",
+    "imageUrls": [],
+    "addressDescription": "",
+
+    "drivingLicence": {
+      "headline": "Legal Framework",
+      "services": [
+        "Guidance on Romanian driving licence procedures",
+        "Support with administrative requirements and documentation",
+        "Coordination with Romanian authorities",
+        "EU-compliant solutions for cross-border situations"
+      ],
+      "description1": "Our Romania practice provides specialized advisory services for driving licence matters, supporting clients in understanding and navigating Romanian administrative procedures in compliance with EU regulations.",
+      "description2": "Romania, as an EU member state, has aligned its driving licence regulations with the EU Driving Licence Directive. Our services ensure that clients receive accurate guidance on procedures that are fully compliant with both Romanian law and EU requirements."
+    }
+  },
+
+  {
+    "id": "austria",
+    "name": "Austria",
+    "city": "Vienna",
+    "address": "Kärntner Ring, 1010 Vienna, Austria",
+    "jurisdiction": "EU member state with competitive business environment",
+    "imageUrls": [],
+    "addressDescription": "Our Vienna office provides specialized support for Austrian regulatory matters and Central European coordination.",
+
+    "drivingLicence": {
+      "headline": "Regulatory Framework",
+      "services": [
+        "Guidance on Austrian driving licence regulations and procedures",
+        "Assistance with licence recognition and exchange processes",
+        "Coordination with Austrian administrative authorities",
+        "Cross-border compliance with EU Directive requirements"
+      ],
+      "description1": "Our firm provides expert guidance on driving licence matters in Austria, assisting clients in navigating the administrative requirements and legal framework governing EU driving licences.",
+      "description2": "Austria's driving licence regulations are governed by the Führerscheingesetz (FSG) and are harmonized with EU Directive 2006/126/EC. Our advisory services ensure clients understand their obligations and options within this legal framework, facilitating compliant solutions for cross-border situations."
+    }
+  },
+
+  {
+    "id": "united-kingdom",
+    "name": "United Kingdom",
+    "city": "",
+    "address": "",
+    "jurisdiction": "",
+    "imageUrls": [],
+    "addressDescription": ""
+  },
+
+  {
+    "id": "united-states",
+    "name": "United States",
+    "city": "",
+    "address": "",
+    "jurisdiction": "",
+    "imageUrls": [],
+    "addressDescription": ""
+  },
+
+  {
+    "id": "dubai",
+    "name": "Dubai",
+    "city": "Dubai",
+    "address": "",
+    "jurisdiction": "",
+    "imageUrls": [],
+    "addressDescription": ""
+  },
+
+  {
+    "id": "switzerland",
+    "name": "Switzerland",
+    "city": "",
+    "address": "",
+    "jurisdiction": "",
+    "imageUrls": [],
+    "addressDescription": ""
+  }
+]
