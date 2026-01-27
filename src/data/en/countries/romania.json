@@ -1,0 +1,21 @@
+{
+    "id": "romania",
+    "name": "Romania",
+    "city": "",
+    "address": "",
+    "jurisdiction": "EU member state with competitive business environment",
+    "imageUrls": [],
+    "addressDescription": "",
+
+    "drivingLicence": {
+      "headline": "Legal Framework",
+      "services": [
+        "Guidance on Romanian driving licence procedures",
+        "Support with administrative requirements and documentation",
+        "Coordination with Romanian authorities",
+        "EU-compliant solutions for cross-border situations"
+      ],
+      "description1": "Our Romania practice provides specialized advisory services for driving licence matters, supporting clients in understanding and navigating Romanian administrative procedures in compliance with EU regulations.",
+      "description2": "Romania, as an EU member state, has aligned its driving licence regulations with the EU Driving Licence Directive. Our services ensure that clients receive accurate guidance on procedures that are fully compliant with both Romanian law and EU requirements."
+    }
+  }

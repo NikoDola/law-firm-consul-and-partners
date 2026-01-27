@@ -1,0 +1,21 @@
+{
+    "id": "austria",
+    "name": "Austria",
+    "city": "Vienna",
+    "address": "Kärntner Ring, 1010 Vienna, Austria",
+    "jurisdiction": "EU member state with competitive business environment",
+    "imageUrls": [],
+    "addressDescription": "Our Vienna office provides specialized support for Austrian regulatory matters and Central European coordination.",
+
+    "drivingLicence": {
+      "headline": "Regulatory Framework",
+      "services": [
+        "Guidance on Austrian driving licence regulations and procedures",
+        "Assistance with licence recognition and exchange processes",
+        "Coordination with Austrian administrative authorities",
+        "Cross-border compliance with EU Directive requirements"
+      ],
+      "description1": "Our firm provides expert guidance on driving licence matters in Austria, assisting clients in navigating the administrative requirements and legal framework governing EU driving licences.",
+      "description2": "Austria's driving licence regulations are governed by the Führerscheingesetz (FSG) and are harmonized with EU Directive 2006/126/EC. Our advisory services ensure clients understand their obligations and options within this legal framework, facilitating compliant solutions for cross-border situations."
+    }
+  }

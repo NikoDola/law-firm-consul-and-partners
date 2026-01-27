@@ -1,0 +1,103 @@
+local_backend:
+  # Default is 8081. We pin this because on Windows it's common for 8081 to be taken.
+  url: http://localhost:8082/api/v1
+
+backend:
+  name: github
+  # IMPORTANT: must match your Git remote / GitHub repo slug
+  repo: NikoDola/law-firm-consul-and-partners
+  branch: main
+  # Use the Next.js OAuth endpoints in this repo (see `src/app/api/auth/*`).
+  # If you host the site under a different origin, the endpoint is still the same path.
+  auth_endpoint: /api/auth
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: pages
+    label: Pages
+    folder: "src/data/en/pages"
+    create: false
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+
+    fields:
+      - { label: Route, name: route, widget: string }
+      - { label: Order, name: order, widget: number }
+      - { label: Is Home, name: isHome, widget: boolean }
+
+      - { label: Headline 1, name: headline1, widget: string }
+      - { label: Description 1, name: description1, widget: text }
+
+      - { label: Headline 2, name: headline2, widget: string }
+      - { label: Description 2, widget: text, name: description2 }
+
+      - { label: Headline 3, name: headline3, widget: string }
+      - { label: Description 3, name: description3, widget: text }
+
+  - name: services
+    label: Services
+    folder: "src/data/en/services"
+    create: true
+    slug: "{{id}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: ID, name: id, widget: string }
+      - { label: Title, name: title, widget: string }
+      - { label: Icon Key, name: iconKey, widget: string, required: false }
+      - { label: Description, name: description, widget: text }
+      - label: Countries
+        name: countries
+        widget: relation
+        collection: countries
+        search_fields: ["name", "id"]
+        value_field: "id"
+        display_fields: ["name"]
+        multiple: true
+
+  - name: countries
+    label: Countries
+    folder: "src/data/en/countries"
+    create: true
+    slug: "{{id}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: ID, name: id, widget: string }
+      - { label: Name, name: name, widget: string }
+      - { label: City, name: city, widget: string }
+      - { label: Address, name: address, widget: string }
+      - { label: Jurisdiction, name: jurisdiction, widget: string }
+      - { label: Address Description, name: addressDescription, widget: text }
+      - label: Image URLs
+        name: imageUrls
+        widget: list
+        required: false
+        field: { label: Image URL, name: imageUrl, widget: string }
+      - label: Insolvency (optional)
+        name: insolvency
+        widget: object
+        required: false
+        fields:
+          - { label: Headline, name: headline, widget: string }
+          - label: Services
+            name: services
+            widget: list
+            field: { label: Service, name: service, widget: string }
+          - { label: Description 1, name: description1, widget: text }
+          - { label: Description 2, name: description2, widget: text }
+      - label: Driving Licence (optional)
+        name: drivingLicence
+        widget: object
+        required: false
+        fields:
+          - { label: Headline, name: headline, widget: string }
+          - label: Services
+            name: services
+            widget: list
+            field: { label: Service, name: service, widget: string }
+          - { label: Description 1, name: description1, widget: text }
+          - { label: Description 2, name: description2, widget: text }

@@ -1,0 +1,7 @@
+{
+    "id": "company-relocation",
+    "title": "Company Relocation",
+    "iconKey": "",
+    "description": "Comprehensive assistance with the relocation of company headquarters and establishment of new legal entities, including legal structuring and administrative coordination.",
+    "countries": ["romania", "ireland", "switzerland", "austria"]
+  }

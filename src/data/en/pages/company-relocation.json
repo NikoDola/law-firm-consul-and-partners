@@ -1,0 +1,25 @@
+{
+    "route": "/company-relocation",
+    "order": 3,
+    "imageUrl": "",
+    "metaTitle": "Company Relocation",
+    "metaDescription": "Legal structuring, administrative coordination, and interaction with relevant authorities to ensure compliant and efficient setups.",
+    "isHome": false,
+
+    "headline1": "Company Relocation",
+    "description1": "Structured support for corporate establishment and relocation",
+
+    "headline2": "Services",
+    "services": [
+      "Legal entity structuring and formation",
+      "Headquarters relocation coordination",
+      "Administrative and regulatory coordination",
+      "Cross-border corporate restructuring"
+    ],
+    "description2": "Our firm assists with the relocation of company headquarters and the establishment of new legal entities. We provide comprehensive support including legal structuring, administrative coordination, and interaction with relevant authorities to ensure compliant and efficient setups.",
+
+    "headline3": "Process",
+    "description3": "Our approach involves thorough analysis of client requirements, jurisdictional assessment, and structured implementation. We coordinate with local authorities, legal practitioners, and administrative bodies to ensure a compliant and efficient relocation or establishment process.",
+
+    "countries": []
+  }

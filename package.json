@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "cms": "set PORT=8082&& npx --yes decap-server",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

@@ -1,0 +1,25 @@
+ {
+    "route": "/asset-management",
+    "order": 2,
+    "imageUrl": "",
+    "metaTitle": "Asset Management",
+    "metaDescription": "Legally sound frameworks, transparency, and long-term reliability rather than speculative or promotional approaches.",
+    "isHome": false,
+
+    "headline1": "Asset Management Advisory",
+    "description1": "Structured solutions for international asset organization",
+
+    "headline2": "Advisory Services",
+    "services": [
+      "International asset structuring guidance",
+      "Jurisdictional analysis and comparison",
+      "Legal framework assessment",
+      "Compliance and transparency requirements"
+    ],
+    "description2": "Our firm offers structured advisory services related to asset organization and international structuring. We focus on legally sound frameworks, transparency, and long-term reliability rather than speculative or promotional approaches.",
+
+    "headline3": "Our Approach",
+    "description3": "We provide objective, informational guidance focused on legal compliance and long-term stability. Our advisory services are designed to help clients understand the regulatory landscape and make informed decisions about asset organization across multiple jurisdictions.",
+
+    "countries": []
+  }

@@ -1,0 +1,21 @@
+{
+    "id": "cyprus",
+    "name": "Cyprus",
+    "city": "",
+    "address": "",
+    "jurisdiction": "",
+    "imageUrls": [],
+    "addressDescription": "",
+
+    "insolvency": {
+      "headline": "Jurisdiction Advantages",
+      "services": [
+        "Coordination of insolvency proceedings under Cypriot law",
+        "Liaison with Cypriot courts and administrative bodies",
+        "Cross-border coordination with other EU member states",
+        "Communication with creditors and stakeholders"
+      ],
+      "description1": "Our Cyprus practice provides specialized support for insolvency matters, leveraging the jurisdiction's position as a key European business hub with connections to both EU and international markets.",
+      "description2": "Cyprus, as an EU member state, offers a stable legal framework aligned with European standards. The jurisdiction provides efficient procedures for handling both domestic and cross-border insolvency matters, supported by a well-developed professional infrastructure."
+    }
+  }
