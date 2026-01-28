@@ -5,5 +5,7 @@
     "address": "",
     "jurisdiction": "",
     "imageUrls": [],
-    "addressDescription": ""
+    "addressDescription": "",
+    "headOffice": false
+    
   }

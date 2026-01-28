@@ -2,7 +2,9 @@ import Link from "next/link";
 
 import type { Service } from "@/types/content";
 import { loadPages, loadServices } from "@/lib/loadContent";
-import HeroMedia from "@/components/HeroMedia";
+import ParallaxHeroMedia from "@/components/ParallaxHeroMedia";
+import HeroCarousel from "@/components/HeroCarousel";
+import { mediaForPage } from "@/lib/mediaRouting";
 
 import styles from "./home.module.css";
 
@@ -18,7 +20,11 @@ export default async function Home() {
   return (
     <main>
       <section className={styles.hero}>
-        <HeroMedia mediaUrl={homePage.imageUrl} />
+        {mediaForPage(homePage.imageUrl).length > 1 ? (
+          <HeroCarousel mediaUrls={mediaForPage(homePage.imageUrl)} />
+        ) : (
+          <ParallaxHeroMedia mediaUrl={mediaForPage(homePage.imageUrl)[0] ?? ""} />
+        )}
 
         <div className={`container ${styles.heroInner}`}>
           <div className={styles.kicker}>International Legal Consulting</div>

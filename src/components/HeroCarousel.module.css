@@ -1,0 +1,56 @@
+.wrap {
+  position: absolute;
+  inset: 0;
+}
+
+.controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.btn {
+  pointer-events: auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(2, 6, 23, 0.35);
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+}
+
+.btn:hover {
+  background: rgba(2, 6, 23, 0.5);
+}
+
+.dots {
+  display: flex;
+  gap: 0.45rem;
+  pointer-events: auto;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0;
+}
+
+.dotActive {
+  background: var(--eu-star-color);
+  border-color: var(--eu-star-color);
+}
+

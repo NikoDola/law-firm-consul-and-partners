@@ -1,24 +1,10 @@
 "use client";
 
+/* eslint-disable @next/next/no-img-element */
 import { useEffect, useMemo, useRef } from "react";
 
 import styles from "./HeroMedia.module.css";
-
-function isVideoUrl(url: string) {
-  const clean = url.split("?")[0].toLowerCase();
-  return (
-    clean.endsWith(".mp4") || clean.endsWith(".webm") || clean.endsWith(".ogg")
-  );
-}
-
-function normalizeMediaUrl(raw: string) {
-  const url = raw.trim().replaceAll("\\", "/");
-  if (!url) return "";
-  if (/^https?:\/\//i.test(url)) return url;
-  if (url.startsWith("/")) return url;
-  if (url.startsWith("public/")) return `/${url.slice("public/".length)}`;
-  return `/${url}`;
-}
+import { isVideoUrl, normalizePublicAssetUrl } from "@/lib/mediaRouting";
 
 export default function ParallaxHeroMedia({
   mediaUrl,
@@ -35,7 +21,7 @@ export default function ParallaxHeroMedia({
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const url = useMemo(() => normalizeMediaUrl(mediaUrl ?? ""), [mediaUrl]);
+  const url = useMemo(() => normalizePublicAssetUrl(mediaUrl ?? ""), [mediaUrl]);
   const hasMedia = url.length > 0;
   const isVideo = hasMedia ? isVideoUrl(url) : false;
 
@@ -112,13 +98,7 @@ export default function ParallaxHeroMedia({
 
   return (
     <div ref={containerRef} className={styles.media} aria-hidden="true">
-      {/* Classic CSS parallax */}
-      <div
-        className={styles.imageBg}
-        style={{
-          backgroundImage: `url("${url}")`,
-        }}
-      />
+      <img className={styles.image} src={url} alt="" decoding="async" />
       <div className={styles.overlay} />
     </div>
   );

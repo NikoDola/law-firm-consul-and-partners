@@ -3,6 +3,7 @@
     "name": "Dubai",
     "city": "Dubai",
     "address": "",
+    "headOffice": false,
     "jurisdiction": "",
     "imageUrls": [],
     "addressDescription": ""

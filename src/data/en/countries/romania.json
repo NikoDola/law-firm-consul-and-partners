@@ -6,6 +6,7 @@
     "jurisdiction": "EU member state with competitive business environment",
     "imageUrls": [],
     "addressDescription": "",
+    "headOffice": false,
 
     "drivingLicence": {
       "headline": "Legal Framework",

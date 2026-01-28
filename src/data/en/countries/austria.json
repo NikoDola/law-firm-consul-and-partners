@@ -3,6 +3,7 @@
     "name": "Austria",
     "city": "Vienna",
     "address": "Kärntner Ring, 1010 Vienna, Austria",
+    "headOffice": false,
     "jurisdiction": "EU member state with competitive business environment",
     "imageUrls": [],
     "addressDescription": "Our Vienna office provides specialized support for Austrian regulatory matters and Central European coordination.",

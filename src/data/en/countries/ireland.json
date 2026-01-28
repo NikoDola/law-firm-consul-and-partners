@@ -26,8 +26,9 @@
   "city": "Dublin",
   "name": "Ireland",
   "address": "Merrion Square, Dublin 2, Ireland",
+  "headOffice": true,
   "id": "ireland",
   "imageUrls": [
-    "public/uploads/stunning-sunset-seen-from-the-sea-_-time-lapse-_-10-seconds-video-_-nature-blogs.mp4"
+    "public/ireland-driving-licence-video-mp4", "public/uploads/cyper.avif","public/uploads/ireland-insolvency-cliff.jpg", "public/uploads/driving-licence_dublin-road-DiNCimGx.webp", "public/uploads/head-office-ireland-location.webp"
   ]
 }

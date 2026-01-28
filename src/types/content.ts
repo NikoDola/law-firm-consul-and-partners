@@ -20,6 +20,7 @@ export type Country = {
   name: string;
   city: string;
   address: string;
+  headOffice?: boolean;
   jurisdiction: string;
   imageUrls: string[];
   addressDescription: string;
@@ -35,7 +36,8 @@ export type Country = {
 export type Page = {
   route: string;
   order: number;
-  imageUrl: string;
+  /** Can be a single URL or a list (for hero slider) */
+  imageUrl: string | string[];
   metaTitle: string;
   metaDescription: string;
   isHome: boolean;

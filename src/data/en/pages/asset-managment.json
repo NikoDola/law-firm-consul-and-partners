@@ -1,7 +1,7 @@
  {
     "route": "/asset-management",
     "order": 2,
-    "imageUrl": "",
+    "imageUrl": "public/uploads/asset-managment.webp",
     "metaTitle": "Asset Management",
     "metaDescription": "Legally sound frameworks, transparency, and long-term reliability rather than speculative or promotional approaches.",
     "isHome": false,

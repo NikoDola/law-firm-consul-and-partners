@@ -3,8 +3,9 @@
     "name": "Cyprus",
     "city": "",
     "address": "",
+    "headOffice": false,
     "jurisdiction": "",
-    "imageUrls": [],
+    "imageUrls": ["public/uploads/cyper.avif", "public/uploads/cyper2.avif"],
     "addressDescription": "",
 
     "insolvency": {

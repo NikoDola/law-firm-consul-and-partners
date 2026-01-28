@@ -2,7 +2,9 @@ import { notFound } from "next/navigation";
 
 import type { Country, PracticeArea } from "@/types/content";
 import { loadCountries } from "@/lib/loadContent";
-import HeroMedia from "@/components/HeroMedia";
+import ParallaxHeroMedia from "@/components/ParallaxHeroMedia";
+import HeroCarousel from "@/components/HeroCarousel";
+import { mediaForPractice } from "@/lib/mediaRouting";
 
 import styles from "./PracticeCountryPage.module.css";
 
@@ -22,12 +24,17 @@ export default async function PracticeCountryPage({
   const practice = country[practiceKey] as PracticeArea | undefined;
   if (!practice) notFound();
 
-  const heroUrl = (country.imageUrls?.[0] ?? "").trim();
+  const practiceMedia = mediaForPractice(country.imageUrls, practiceKey);
+  const heroUrl = practiceMedia[0] ?? "";
 
   return (
     <main>
       <section className={styles.hero}>
-        <HeroMedia mediaUrl={heroUrl} />
+        {practiceMedia.length > 1 ? (
+          <HeroCarousel mediaUrls={practiceMedia} />
+        ) : (
+          <ParallaxHeroMedia mediaUrl={heroUrl} />
+        )}
 
         <div className={`container ${styles.heroInner}`}>
           <div className={styles.kicker}>{practiceLabel}</div>
