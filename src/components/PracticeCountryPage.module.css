@@ -1,0 +1,111 @@
+.hero {
+  position: relative;
+  min-height: 52vh;
+  display: grid;
+  align-items: center;
+  padding: 5.25rem 0 3.25rem;
+  color: #ffffff;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+}
+
+.kicker {
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.h1 {
+  margin: 0.8rem 0 0;
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+  text-align: center;
+  line-height: 1rem;
+}
+
+.h1Sub {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.lede {
+  margin-top: 1.2rem;
+  max-width: 75ch;
+  color: black;
+  white-space: pre-line;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.section {
+  display: flex;
+  padding: 3.25rem 0 4.25rem;
+  
+}
+
+
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.2rem;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.05);
+  width: 100%;
+}
+
+.bullets li::marker {
+  content: "➜ ";
+}
+
+.cardTitle {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.bullets {
+  margin: 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.officeLine {
+  margin-top: 0.25rem;
+}
+
+.officeMeta {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.prose {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  white-space: pre-line;
+  color: var(--muted);
+  max-width: 80ch;
+}
+
+.longText {
+  margin-top: 2.25rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.75rem;
+}
+
+.h2 {
+  margin: 0 0 0.9rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+

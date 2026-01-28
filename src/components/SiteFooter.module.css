@@ -1,0 +1,85 @@
+.footer {
+  background: #06080d;
+  color: #e5e7eb;
+  margin-top: 5rem;
+}
+
+.inner {
+  padding: 3.5rem 0;
+  display: grid;
+  grid-template-columns: 1.1fr 1.9fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.brandName {
+  font-family: var(--font-heading), Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.brandTagline {
+  margin-top: 0.5rem;
+  color: rgba(229, 231, 235, 0.72);
+  max-width: 32ch;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.colTitle {
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.link {
+  color: rgba(229, 231, 235, 0.78);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
+  color: rgba(229, 231, 235, 0.7);
+  font-size: 0.95rem;
+}
+
+.bottomInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.dot {
+  opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}
+
